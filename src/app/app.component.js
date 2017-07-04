@@ -1,11 +1,7 @@
 // import angular from 'angular';
 
-function appComponent(){
-    return {
-        template: 'app.html',
-        controller: 'appController',
-        contollerAs: 'vm'
-    }
-}
-
-angular.module('AppModule').component('appComponent',appComponent);
+angular.module('AppModule').component('appcomponent', {
+    templateUrl: './app/app.html',
+    controller: 'appController',
+    contollerAs: 'vm'
+});
