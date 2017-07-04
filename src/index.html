@@ -3,11 +3,11 @@
 <head >
     <title>Księgarnia internetowa</title>
 </head>
-<body ng-app="AppModule">
-    <div>
-    <app-component></app-component>
+<body ng-app="AppModule" layout="column">
+    <my-header></my-header>
+    <div class="container" layout="row" flex>
+        <my-sidenav></my-sidenav>
     </div>
-    <md-toolbar></md-toolbar>
 
 
 </body>

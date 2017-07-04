@@ -1,0 +1,15 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+md-sidenav{
+    min-height: 100%;
+}
+md-list-item > button{
+    width: 100%;
+    text-align: left !important;
+}
