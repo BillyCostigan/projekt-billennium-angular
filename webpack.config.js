@@ -4,13 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
  
 module.exports = {
     entry: {
-        app: './src/app/app.module.js',
-        appComponent: './src/app/app.component.js',
-        appController: './src/app/app.controller.js'
+        app: './src/app/appModule.js',
+        appComponent: './src/app/appComponent.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].module.js'
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -43,7 +42,17 @@ module.exports = {
                         }
                     }
                 ]
-            }   
+            },
+            {
+                test: /\.html$/,
+                use: [ {
+                    loader: 'html-loader',
+                    options: {
+                        minimize: false
+                    }
+                }   
+                ]
+            }
         ]
     },
     plugins: [
