@@ -1,9 +1,9 @@
 import angular from 'angular';
-import ngMaterial from 'angular-material';
+import angularMaterial from 'angular-material';
 import appComponent from './appComponent';
 
 
-export default angular.module('AppModule', ['ngMaterial'])
+export default angular.module('AppModule', [angularMaterial])
     .component('appComponent', appComponent);
 
 
