@@ -1,0 +1,43 @@
+{
+  "name": "projekt-billennium-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel build server",
+    "build": "webpack -v --config webpack.config.js",
+    "server": "http-server -p 8000 -c -1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BidziS/projekt-billennium-angular.git"
+  },
+  "keywords": [
+    "billennium",
+    "angularjs"
+  ],
+  "author": "Daniel Cudnik, Leszek Kłoczko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BidziS/projekt-billennium-angular/issues"
+  },
+  "homepage": "https://github.com/BidziS/projekt-billennium-angular#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-aria": "^1.6.5",
+    "angular-material": "^1.1.4",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.6.25",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.5.2",
+    "html-webpack-plugin": "^2.29.0",
+    "npm-run-all": "^4.0.2",
+    "source-map-loader": "^0.2.1",
+    "webpack": "^3.0.0"
+  }
+}
