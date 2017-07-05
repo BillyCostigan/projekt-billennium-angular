@@ -9,23 +9,53 @@ import './style.css';
 
 import CommonModule from './components/common/commonModule';
 
+import LoginComponent from './components/login/loginComponent';
+import HomeComponent from './components/home/homeComponent';
 
-export default angular.module('AppModule', [ngMaterial, uiRouter, CommonModule.name]).config(routingConfigs);
+import StatisticComponent from './components/home/statistic/statisticComponent';
+import ManageLecturesComponent from './components/home/manageLectures/manage-lecturesComponent';
+
+export default angular.module('AppModule', [ngMaterial, uiRouter, CommonModule.name])
+                    .config(routingConfigs)
+                    .component('homeComponent', HomeComponent)
+                    .component('loginComponent', LoginComponent)
+                    .component('myStatistic', StatisticComponent)
+                    .component('myManageLectures', ManageLecturesComponent);
 
 
 
 function routingConfigs($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider
+    .when('/home', '/home/statistic')
+    .otherwise('/login');
+
+  const login = {
+    name: 'login',
+    url: '/login',
+    component: 'loginComponent'
+  }
+  const home = {
+    name: 'home',
+    url: '/home',
+    component: 'homeComponent'
+  }
+
+  const homeStatistic = {
+    name: 'home.statistic',
+    url: '/statistic',
+    component: 'myStatistic'
+  }
+
+  const homeManageLectures = {
+    name: 'home.manage-lectures',
+    url: '/manage-lectures',
+    component: 'myManageLectures'
+  }
+  
 
   $stateProvider
-    .state('login', {
-      url: "/login",
-      component: 'LoginComponent'
-    })
-    .state('home', {
-      url: "/home",
-      templateUrl: "./components/home/home.html",
-      controller:  'LoginController',
-      controllerAs: 'vm'
-    });
+    .state(login)
+    .state(home)
+    .state(homeStatistic)
+    .state(homeManageLectures);
 };
