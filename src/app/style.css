@@ -11,5 +11,21 @@ md-sidenav{
 }
 md-list-item > button{
     width: 100%;
+    height: 60px;
     text-align: left !important;
+}
+
+.menu-button{
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+.header-title{
+    margin-left: 0;
+}
+
+@media all and (min-width: 960px) {
+    .header-title{
+        margin-left: 40px;
+    }
 }

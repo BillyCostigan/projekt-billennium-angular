@@ -1,9 +1,12 @@
-<md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp" md-component-id="left">
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-4dp" md-component-id="left">
     <md-list>
-        <md-list-item>
-            <md-button>          
-                cośnapisane
+        <md-list-item id="item.id"  ng-repeat="item in vm.menu">
+            <md-button >          
+                {{item.login}}
             </md-button>
         </md-list-item>
     </md-list>
+    <md-button ng-click="vm.check()" >          
+        elo
+    </md-button>
 </md-sidenav>
